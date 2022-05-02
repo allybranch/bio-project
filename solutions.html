@@ -52,9 +52,41 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+                        <p>
+                            The solutions we found for improving privacy in CODIS focus on encryption algorithms for matching
+                            single samples against the entire database. The two parties - the FBI and the lab testing the sample - 
+                            should not learn the other's information in the process of checking for a match. Otherwise, there would
+                            be too many labs containing the entirety of CODIS, and the FBI would have DNA data from suspects that had 
+                            not yet been convicted. The first two publications examined are specific to CODIS, whereas the third is a 
+                            general encryption algorithm that could be applied to CODIS.
+                        </p>
+                        <p>
+                            The first solution is from "Genomic Encryption of Biometric Information for Privacy-Preserving Forensics",
+                            by Jung, Karl and Siwo. It is an elegant solution in which the STRs of records in the database become their 
+                            own Advanced Encryption Standard (AES) keys, the encrypted data stored directly in CODIS. Then, the testing
+                            sample STRs are used to decrypt the entire database, revealing a full match in readable form if one exists. 
+                            This solution is not only helpful in everyday operation of CODIS, but should the entire database become compromised,
+                            none of it would be readable regardless. However, this solution does necessitate a full match, and would require 
+                            all of the pre-existing records within CODIS to be transformed. 
+                        </p>
+                        <p>
+                            The second solution we looked at was from researchers at Philips Research Europe, Information and System Security Group,
+                            in Eindhoven, the Netherlands, as well as from the Technische Universit¨at Darmstadt, Security Engineering Group,
+                            Darmstadt, Germany. They proposed several protocols for DNA identity, paternity, and ancestry testing. The identity testing,
+                            which closest aligns with the 'hit' goals of CODIS, uses ElGamal encryption. This is more secure against hostile actors than the 
+                            other two solutions found, and can account for small degrees of partial matching in the samples, but is not as efficient. 
+                        </p>
+                        <p>
+                            The third solution comes from Hao Chen, Kim Laine, and Peter Rindal, of Microsoft Research and Oregon State. 
+                            Their Private Set Intersection (PSI) algorithm greatly improves upon the time efficiency of previous 
+                            fully homomorphic encryptions to solve the same issue. It also applies well to the FBI-sender and lab-receiver model,
+                            in which the size of the sender's dataset is much larger than the receiver's (only a single datapoint). Their computation
+                            is linear in the size of the smaller set and logarithmic in the size of the larger set. The algorithm itself has batching 
+                            and hashing optimizations on top on a given fully homomorphic encryption scheme, and requires the sender to compute the 
+                            intersection of the encrypted sets via dot product. However fast this solution is, there are a few flaws. Requiring the sender
+                            (FBI) to compute the intersection is likely to cause bottlenecks. Also, after running, the receiver remains only with
+                            a yes/no of whether a match was found, not the accessory information within the record it matched to, such as its ID number.
+                        </p>
                     </div>
                 </div>
             </div>
