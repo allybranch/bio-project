@@ -55,11 +55,30 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <h2 class="section-heading">What is CODIS?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec nibh ullamcorper, lacinia mauris eu, semper augue. Integer vel lorem vitae purus pharetra tempor et sed lectus. Vivamus id ex luctus, semper tortor vel, cursus quam. Donec sit amet porta velit, posuere lacinia urna. Ut accumsan nulla non ante condimentum, mollis sodales diam mollis. Pellentesque non libero odio. Pellentesque molestie quam tellus, et fringilla erat imperdiet a. Quisque vestibulum ex quis congue iaculis. Nam est metus, bibendum ac ante a, gravida placerat risus. Ut eros orci, semper at rhoncus sed, maximus non justo. Suspendisse ut lorem pellentesque, tempor velit ut, porta mi. Nullam ullamcorper dictum ante, sit amet hendrerit urna congue nec. Sed semper odio ac congue semper.</p>
-                        
-           
+                        <p>
+                            CODIS stands for the Combined DNA Index System, developed by the Federal Bureau of Investigation (FBI) in 1990<a href="https://archives.fbi.gov/archives/news/testimony/the-fbis-codis-program#:~:text=The%20CODIS%20program%20has%20exceeded,and%20the%20District%20of%20Columbia">*</a>. 
+                            It is a database which holds records of Short Tandem Repeats (STRs), locations within the genome which have consistent repeated sequences of nucleic acids. The lengths 
+                            of these repeats are variable enough across the human species to uniquely identify a person with 20 STR loci. Samples 
+                            taken from crime scenes, offenders, suspects, or unidentified persons help a criminal investigation link one to the other. 
+                            CODIS is maintained by the FBI and kept secret, as the biological data contained within is inherently sensitive, but the FBI works with 
+                            state and local levels of law enforcement to provide the resource, which in turn contract much of the analysis work out to private laboratories 
+                            <a href="https://www.fbi.gov/services/laboratory/biometric-analysis/codis/codis-and-ndis-fact-sheet">*</a>.
+
+                        </p>
                         <h2 class="section-heading">How does CODIS work?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec nibh ullamcorper, lacinia mauris eu, semper augue. Integer vel lorem vitae purus pharetra tempor et sed lectus. Vivamus id ex luctus, semper tortor vel, cursus quam. Donec sit amet porta velit, posuere lacinia urna. Ut accumsan nulla non ante condimentum, mollis sodales diam mollis. Pellentesque non libero odio. Pellentesque molestie quam tellus, et fringilla erat imperdiet a. Quisque vestibulum ex quis congue iaculis. Nam est metus, bibendum ac ante a, gravida placerat risus. Ut eros orci, semper at rhoncus sed, maximus non justo. Suspendisse ut lorem pellentesque, tempor velit ut, porta mi. Nullam ullamcorper dictum ante, sit amet hendrerit urna congue nec. Sed semper odio ac congue semper.</p>
+                        <p>
+                            CODIS is a relational database: there are multiple indices (subsections) which contain records of individual sample data. Each record 
+                            consists of an identifier for the laboratory which analyzed the sample and the analyst, a unique identification number for the sample,
+                            and the set of 20 STR pairs which are the actual biological data itself. Note that this does not include the name of the sample donor, 
+                            which must be cross-referenced with the originating lab upon a data match. The STR information in each sample is also non-coding, meaning 
+                            it reveals nothing about the donor's phenotype. The three major indices are the offender, arrestee, and forensic index, followed by the smaller 
+                            indices of unidentified persons, missing persons, and consenting family members of missing persons. The matching process is relatively straightforward:
+                            the testing sample is compared to all records in the database to find if one has the same set of STRs. Occassionally, there may be a partial match 
+                            in which one or two of the STRs do not match, which likely indicates a mutation within the individual or a closely related family member, but 
+                            the results of partial matches must be examined critically on a case-by-case basis <a href="https://archives.fbi.gov/archives/about-us/lab/forensic-science-communications/fsc/oct2009/standard_guidlines/swgdam.html">*</a>. 
+                            There have also been recent developments in familial searching and probabilistic genotyping, but for the purposes of this site, we will focus on 
+                            the traditional exact identity matching model of CODIS and its security.
+                        </p>
                     </div>
                 </div>
             </div>
